@@ -1,0 +1,82 @@
+DROP DATABASE IF EXISTS findgarp_test;
+
+CREATE DATABASE findgarp_test;
+
+\c findgarp_test
+
+DROP TABLE IF EXISTS companies;
+
+CREATE TABLE companies (
+    ticker VARCHAR(6) PRIMARY KEY,
+    company_name text DEFAULT '',
+    epsGrowth3Y NUMERIC DEFAULT 0,
+    epsGrowth5Y NUMERIC DEFAULT 0,
+    revenueShareGrowth5Y NUMERIC DEFAULT 0,
+    revenueGrowth5Y NUMERIC DEFAULT 0,
+    peNormalizedAnnual NUMERIC DEFAULT 0,
+    epsNormalizedAnnual NUMERIC DEFAULT 0,
+    epsExclExtraItemsTTM NUMERIC DEFAULT 0,
+    high52WeekHigh NUMERIC DEFAULT 0,
+    low52WeekLow NUMERIC DEFAULT 0,
+    dividendPerShareAnnual NUMERIC DEFAULT 0,
+    dividendsPerShareTTM NUMERIC DEFAULT 0,
+    revenuePerShareTTM NUMERIC DEFAULT 0,
+    shareOutstanding NUMERIC DEFAULT 0,
+    previousClose NUMERIC DEFAULT 0,
+    growthRate NUMERIC DEFAULT 0,
+    orderBy NUMERIC DEFAULT 0,
+    lastUpdate TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO companies
+  VALUES
+('LIN'),
+('PNC'),
+('NEM'),
+('TEL'),
+('CDW'),
+('K'),
+('ALNY'),
+('QRVO'),
+('OHI'),
+('TOL'),
+('CLH'),
+('EXP'),
+('MEDP'),
+('PRFT'),
+('COOP'),
+('HL'),
+('BCRX'),
+('MWA'),
+('FOUR'),
+('RNST'),
+('OSIS'),
+('SPTN'),
+('JOBY'),
+('UTL'),
+('AHH'),
+('MGI'),
+('RILY'),
+('JBSS'),
+('IDT'),
+('CLAR'),
+('IIIV'),
+('SENS'),
+('SPWH'),
+('SIBN'),
+('ADV'),
+('ACLX'),
+('BLDE'),
+('IESC'),
+('CBNK'),
+('BGSF'),
+('BARK'),
+('MNTS'),
+('OBCI'),
+('GIFI'),
+('TARA'),
+('ICD'),
+('BRTX'),
+('CASH'),
+('OSTK'),
+('RGF');
